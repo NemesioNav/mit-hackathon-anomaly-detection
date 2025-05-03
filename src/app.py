@@ -40,7 +40,7 @@ st.title("🚁 Thermal Drone Anomaly Detection")
 st.write("Upload a thermal drone image to check for potential human presence (anomaly).")
 
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
-threshold = st.slider("Anomaly Score Threshold", 0.0, 2000.0, 1296.9338, 0.1)
+threshold = st.slider("Anomaly Score Threshold", 0.0, 10.0, 1.5, 0.1)
 
 if uploaded_file is not None:
     image = Image.open(uploaded_file).convert("L")  # grayscale

@@ -7,7 +7,7 @@ import os
 from torchvision import transforms
 from torch.utils.data import DataLoader
 from PIL import Image
-from dino import model, extract_dino_patches, AugmentedImageFolder, transform  # reuse your definitions
+from src.dino import model, extract_dino_patches, AugmentedImageFolder, transform  # reuse your definitions
 
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 

@@ -1,2 +1,9 @@
 # Ignore dataset directories
 data/
+
+# Ignore model directories
+# all .index
+*.index
+
+# pycache
+__pycache__/
