@@ -1,5 +1,8 @@
 # Anomaly Detection for Thermal Drone Footage
 
+> 🏆 **Achieved 0.95 AUROC** on real-world thermal drone data for missing person detection.  
+> Demonstrates strong generalization from industrial anomaly detection models to humanitarian rescue scenarios.
+
 **Track**: Fine-Tuning of Models
 
 ## 1. Motivation
@@ -61,3 +64,34 @@ In emergencies, speed matters. AI-assisted drone footage analysis can drasticall
 ### Industrial Impact
 
 Anomaly detection in manufacturing is a massive challenge. Automating it boosts safety, quality, and efficiency. This project bridges industrial methods and real-world applications, proving AI’s flexibility across domains.
+
+## 6. Usage Instructions
+
+1. **Install dependencies** (recommended: Python 3.9+)
+    ```
+    pip install -r requirements.txt
+    ```
+
+2. **Prepare data**: Organize images as:
+    ```
+    data/
+        train/
+            normal/
+                img1.png
+                ...
+        test/
+            normal/
+            abnormal/
+    ```
+
+3. **Run training + evaluation**:
+    ```
+    python save_index.py
+    ```
+
+4. **Use the Streamlit interface**:
+    ```
+    streamlit run app.py
+    ```
+
+The app allows users to upload a thermal image and get an anomaly score prediction, with automatic classification based on the optimal AUROC-derived threshold.
