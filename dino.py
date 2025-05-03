@@ -119,6 +119,13 @@ def main():
 
     scores = [score_image(p, index, pca) for p in test_paths]
 
+    fpr, tpr, thresholds = roc_curve(labels, scores)
+    youden_j = tpr - fpr
+    optimal_idx = np.argmax(youden_j)
+    optimal_threshold = thresholds[optimal_idx]
+
+    print(f"Optimal threshold: {optimal_threshold:.4f}")
+
     # Compute AUROC
     print("AUROC:", roc_auc_score(labels, scores))
 
